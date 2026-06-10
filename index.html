@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volcano Field Lab — Earth Science Research Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Volcano Field Lab home">
+      <span class="brand-mark"></span>
+      <span>Volcano Field Lab</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#science" class="nav-link">Science</a>
+      <a href="quiz.html" class="nav-link nav-link--quiz">Take Quiz</a>
+      <a href="#archive" class="nav-link">Eruption Dates</a>
+      <a href="game.html" class="nav-link nav-link--game">Play Game</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="ash"></div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="sun"></div>
+        <div class="volcano">
+          <div class="smoke smoke-one"></div>
+          <div class="smoke smoke-two"></div>
+          <div class="smoke smoke-three"></div>
+          <div class="cone cone-left"></div>
+          <div class="cone cone-right"></div>
+          <div class="crater"></div>
+          <div class="lava lava-one"></div>
+          <div class="lava lava-two"></div>
+          <div class="lava lava-three"></div>
+        </div>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Smithsonian-aligned earth science</p>
+        <h1 id="hero-title">Volcanoes</h1>
+        <p>
+          A professional research portal for understanding how magma, pressure, ash,
+          and lava reshape our planet — backed by real eruption data and interactive learning.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#science">Explore the science</a>
+          <a class="button secondary" href="game.html">Launch Lava Runner</a>
+        </div>
+        <div class="hero-stats" aria-label="Quick facts">
+          <div class="stat">
+            <strong>1,500+</strong>
+            <span>Active volcanoes worldwide</span>
+          </div>
+          <div class="stat">
+            <strong>40 km</strong>
+            <span>Magma can rise from deep mantle</span>
+          </div>
+          <div class="stat">
+            <strong>1,200°C</strong>
+            <span>Typical lava temperature</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="science" class="section science-section" aria-labelledby="science-title">
+      <div class="section-heading">
+        <p class="eyebrow">Geological processes</p>
+        <h2 id="science-title">What makes a volcano erupt?</h2>
+        <p class="section-lead">
+          Select any topic below to open a detailed field briefing with diagrams,
+          key terms, and real-world examples.
+        </p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card" data-topic="magma">
+          <span class="feature-icon magma"></span>
+          <div class="feature-meta">
+            <span class="feature-tag">Process 01</span>
+            <h3>Magma rises</h3>
+          </div>
+          <p>Molten rock forms deep underground and pushes upward through weak spots in Earth's crust.</p>
+          <button class="button info-btn" type="button" data-open="magma" aria-haspopup="dialog">
+            <span>View briefing</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </article>
+        <article class="feature-card" data-topic="gas">
+          <span class="feature-icon gas"></span>
+          <div class="feature-meta">
+            <span class="feature-tag">Process 02</span>
+            <h3>Gas builds pressure</h3>
+          </div>
+          <p>Trapped gases expand as magma climbs, creating pressure that can crack rock open.</p>
+          <button class="button info-btn" type="button" data-open="gas" aria-haspopup="dialog">
+            <span>View briefing</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </article>
+        <article class="feature-card" data-topic="ash">
+          <span class="feature-icon ash"></span>
+          <div class="feature-meta">
+            <span class="feature-tag">Process 03</span>
+            <h3>Ash and lava escape</h3>
+          </div>
+          <p>Some eruptions pour lava flows; others blast ash, steam, and rock high into the sky.</p>
+          <button class="button info-btn" type="button" data-open="ash" aria-haspopup="dialog">
+            <span>View briefing</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </article>
+      </div>
+
+      <div class="science-topics">
+        <p class="eyebrow">Extended research modules</p>
+        <div class="topic-buttons">
+          <button class="topic-chip" type="button" data-open="types" aria-haspopup="dialog">
+            <span class="chip-icon types"></span>
+            Volcano types
+          </button>
+          <button class="topic-chip" type="button" data-open="plates" aria-haspopup="dialog">
+            <span class="chip-icon plates"></span>
+            Plate tectonics
+          </button>
+          <button class="topic-chip" type="button" data-open="hazards" aria-haspopup="dialog">
+            <span class="chip-icon hazards"></span>
+            Eruption hazards
+          </button>
+          <button class="topic-chip" type="button" data-open="monitoring" aria-haspopup="dialog">
+            <span class="chip-icon monitoring"></span>
+            How scientists monitor
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="formation" class="section formation-section" aria-labelledby="formation-title">
+      <div class="formation-layout">
+        <div class="formation-copy">
+          <p class="eyebrow">Knowledge check</p>
+          <h2 id="formation-title">How volcanoes are made</h2>
+          <p class="section-lead">
+            Volcanoes do not appear overnight. They form over thousands of years as molten rock,
+            pressure, and repeated eruptions build a mountain from the inside out.
+          </p>
+          <ol class="formation-steps">
+            <li>
+              <strong>Magma forms deep underground</strong>
+              <span>Heat and pressure melt rock in the mantle or lower crust, especially near plate boundaries and hotspots.</span>
+            </li>
+            <li>
+              <strong>Magma rises through the crust</strong>
+              <span>Because magma is less dense than solid rock, it pushes upward through cracks and weak zones.</span>
+            </li>
+            <li>
+              <strong>A magma chamber grows</strong>
+              <span>Molten rock pools beneath the surface, collecting gases that increase pressure over time.</span>
+            </li>
+            <li>
+              <strong>The volcano erupts</strong>
+              <span>Pressure breaks through the surface, releasing lava, ash, and gas. Each eruption adds new layers to the cone.</span>
+            </li>
+            <li>
+              <strong>The mountain builds up</strong>
+              <span>Repeated eruptions stack lava flows and ash layers, slowly shaping the volcano we see above ground.</span>
+            </li>
+          </ol>
+        </div>
+        <div class="formation-cta">
+          <p class="eyebrow">Separate quiz tab</p>
+          <h3>Test what you learned</h3>
+          <p>
+            The quiz opens in its own page with step-by-step instructions on how to answer.
+            Each round gives you <strong>10 random questions</strong> from the full question bank.
+          </p>
+          <a class="button primary" href="quiz.html">
+            Open volcano quiz
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="archive" class="section archive-section" aria-labelledby="archive-title">
+      <div class="archive-copy">
+        <p class="eyebrow">Research portal</p>
+        <h2 id="archive-title">Annual eruption dates</h2>
+        <p>
+          Access the Smithsonian Global Volcanism Program — the world's most comprehensive
+          searchable database of volcanoes, eruption histories, and volcanic activity reports.
+        </p>
+        <a
+          class="button primary archive-button"
+          href="https://volcano.si.edu/search_eruption.cfm"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open eruption-date archive
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 2h4v4M14 2 7 9M6 3H3a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="timeline" aria-label="Sample eruption records">
+        <div class="timeline-header">
+          <span>Year</span>
+          <span>Notable eruption</span>
+        </div>
+        <div class="timeline-row">
+          <strong>2010</strong>
+          <span>Eyjafjallajökull, Iceland — ash cloud disrupted global air travel</span>
+        </div>
+        <div class="timeline-row">
+          <strong>2018</strong>
+          <span>Kīlauea, Hawaii — fissure eruptions destroyed 700+ homes</span>
+        </div>
+        <div class="timeline-row">
+          <strong>2021</strong>
+          <span>Cumbre Vieja, La Palma — 85 days of continuous lava flows</span>
+        </div>
+        <div class="timeline-row">
+          <strong>2022</strong>
+          <span>Hunga Tonga–Hunga Haʻapai — largest atmospheric explosion in a century</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section" aria-labelledby="cta-title">
+      <div class="cta-panel">
+        <div class="cta-copy">
+          <p class="eyebrow">Interactive simulation</p>
+          <h2 id="cta-title">Ready to test your survival skills?</h2>
+          <p>
+            Lava Runner opens in a dedicated simulation tab. Dodge falling lava bombs,
+            collect cooling crystals, and manage your heat meter under eruption conditions.
+          </p>
+        </div>
+        <a class="button primary cta-button" href="game.html">
+          Open Lava Runner
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-brand">Volcano Field Lab</p>
+      <p>Educational portal for curious explorers. Eruption data sourced from the Smithsonian Global Volcanism Program.</p>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div
+      class="modal"
+      id="scienceModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      tabindex="-1"
+    >
+      <header class="modal-header">
+        <div>
+          <p class="modal-eyebrow" id="modalEyebrow"></p>
+          <h2 id="modalTitle"></h2>
+        </div>
+        <button class="modal-close" type="button" id="modalClose" aria-label="Close briefing">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 5l10 10M15 5 5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </header>
+      <div class="modal-body" id="modalBody"></div>
+      <footer class="modal-footer">
+        <button class="button secondary" type="button" id="modalPrev">Previous topic</button>
+        <button class="button primary" type="button" id="modalNext">Next topic</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="science.js"></script>
+</body>
+</html>

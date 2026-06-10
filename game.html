@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lava Runner — Volcano Field Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="game-page">
+  <header class="site-header game-header">
+    <a class="brand" href="index.html" aria-label="Return to Volcano Field Lab">
+      <span class="brand-mark"></span>
+      <span>Volcano Field Lab</span>
+    </a>
+    <div class="game-header-right">
+      <span class="game-title">Lava Runner</span>
+      <nav aria-label="Game navigation">
+        <a href="index.html" class="nav-link">← Back to portal</a>
+        <a href="index.html#science" class="nav-link">Science briefings</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="game-main">
+    <div class="game-layout">
+      <div class="game-panel">
+        <div class="game-frame" tabindex="0" aria-label="Lava Runner play area">
+          <canvas id="lavaGame" width="900" height="500" aria-label="Lava Runner game canvas"></canvas>
+          <div class="game-hud">
+            <span class="hud-pill" id="hudStatus">Ready</span>
+          </div>
+        </div>
+        <div class="game-controls">
+          <button id="startGame" type="button" class="button primary">Start mission</button>
+          <button id="pauseGame" type="button" class="button secondary">Pause</button>
+          <button id="resetGame" type="button" class="button secondary">Reset</button>
+        </div>
+      </div>
+
+      <aside class="score-panel" aria-label="Mission status">
+        <h2>Mission control</h2>
+        <div class="metric">
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="metric">
+          <span>Heat level</span>
+          <div class="heat-bar" aria-hidden="true">
+            <div class="heat-fill" id="heatFill"></div>
+          </div>
+          <strong id="heat">0%</strong>
+        </div>
+        <div class="metric">
+          <span>Status</span>
+          <strong id="status">Ready</strong>
+        </div>
+        <div class="controls-guide">
+          <h3>Controls</h3>
+          <div class="key-grid">
+            <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd>
+            <span>or</span>
+            <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>
+          </div>
+          <ul>
+            <li>Collect <span class="crystal-dot"></span> blue crystals to cool down</li>
+            <li>Avoid <span class="bomb-dot"></span> lava bombs from the crater</li>
+            <li>Heat rises over time — cool it all the way to <strong>0%</strong> to win</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>

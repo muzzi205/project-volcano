@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volcano Quiz — Volcano Field Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="quiz-page">
+  <header class="site-header quiz-header">
+    <a class="brand" href="index.html" aria-label="Return to Volcano Field Lab">
+      <span class="brand-mark"></span>
+      <span>Volcano Field Lab</span>
+    </a>
+    <div class="quiz-header-right">
+      <span class="quiz-page-title">Formation Quiz</span>
+      <nav aria-label="Quiz navigation">
+        <a href="index.html" class="nav-link">← Back to portal</a>
+        <a href="index.html#formation" class="nav-link">How volcanoes form</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="quiz-page-main">
+    <aside class="quiz-guide" aria-labelledby="guide-title">
+      <p class="eyebrow">Before you start</p>
+      <h2 id="guide-title">How to answer the questions</h2>
+      <ol class="guide-steps">
+        <li>
+          <strong>Read the full question</strong>
+          <span>Each question is about how volcanoes form, erupt, or behave. Read it carefully before choosing.</span>
+        </li>
+        <li>
+          <strong>Pick one answer</strong>
+          <span>Click the option you think is correct. You can only select one answer per question.</span>
+        </li>
+        <li>
+          <strong>Check the feedback</strong>
+          <span>After you answer, a short explanation appears. Correct answers turn teal; wrong ones turn red.</span>
+        </li>
+        <li>
+          <strong>Press Next question</strong>
+          <span>The Next button unlocks after you answer. Use it to move through all 10 questions.</span>
+        </li>
+        <li>
+          <strong>Finish and review your score</strong>
+          <span>After question 10, click See results to view your final score out of 10.</span>
+        </li>
+        <li>
+          <strong>Play again for a new set</strong>
+          <span>Every round pulls 10 random questions from the full bank, so each attempt is different.</span>
+        </li>
+      </ol>
+      <a class="button secondary guide-link" href="index.html#formation">Review formation steps</a>
+    </aside>
+
+    <section class="quiz-panel quiz-panel--standalone" aria-labelledby="quiz-panel-title">
+      <div class="quiz-panel-header">
+        <div>
+          <p class="eyebrow">10 random questions</p>
+          <h2 id="quiz-panel-title">Volcano formation quiz</h2>
+        </div>
+        <p id="quizProgress">Question 1 of 10</p>
+      </div>
+
+      <div class="quiz-start" id="quizStart">
+        <p>Ready when you are. This round will include <strong>10 randomly selected questions</strong> about how volcanoes are made and how they work.</p>
+        <button class="button primary" type="button" id="quizBegin">Begin quiz</button>
+      </div>
+
+      <div class="quiz-active" id="quizActive" hidden>
+        <p class="quiz-question" id="quizQuestion"></p>
+        <div class="quiz-options" id="quizOptions" role="group" aria-label="Answer choices"></div>
+        <p class="quiz-feedback" id="quizFeedback" hidden></p>
+        <div class="quiz-actions">
+          <button class="button primary" type="button" id="quizNext" disabled>Next question</button>
+          <button class="button secondary" type="button" id="quizReset" hidden>New random quiz</button>
+        </div>
+      </div>
+
+      <div class="quiz-score" id="quizScore" aria-live="polite">
+        <span>Score</span>
+        <strong id="quizScoreValue">0</strong>
+        <span class="quiz-score-total">/ 10</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
